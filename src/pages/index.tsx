@@ -1,10 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { OutlinedButton } from "../components/Button";
+
+import ArrowIcon from "../assets/icons/icon-arrow.svg";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <main>
       <Head>
         <title>Discover Donorojo | Moro Donorojo 2022</title>
         <meta
@@ -13,7 +16,31 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    </div>
+      <section className="hero h-screen w-full">
+        <div className="absolute w-full h-screen">
+          <Image
+            src="/images/bg-hero.webp"
+            alt="Background hero section"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
+        <div className="h-full w-full flex flex-col justify-center items-center">
+          <div className="header-text relative text-white text-center z-10 h-1/3">
+            <h1 className="text-3xl font-bold tracking-wider mb-4 md:text-8xl">
+              Discover Donorojo
+            </h1>
+            <p className="text-sm font-light ">
+              TEMUKAN BERLIAN TERSEMBUNYI DI DONOROJO
+            </p>
+          </div>
+          <div className="button-scroll z-10">
+            <OutlinedButton text="Selengkapnya" Icon={ArrowIcon} />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 };
 
