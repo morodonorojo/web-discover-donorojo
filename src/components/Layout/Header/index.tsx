@@ -6,6 +6,8 @@ import MobileNav from "./MobileNav";
 import HamburgerMenu from "../../../assets/icons/hamburger-menu.svg";
 
 const Header = () => {
+  // !TODO: use better font size for desktop
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

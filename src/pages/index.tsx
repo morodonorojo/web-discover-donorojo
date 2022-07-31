@@ -4,6 +4,7 @@ import Image from "next/image";
 import { OutlinedButton } from "../components/Button";
 
 import ArrowIcon from "../assets/icons/icon-arrow.svg";
+import { DestinasiCard } from "../components/Card";
 
 const Home: NextPage = () => {
   return (
@@ -38,6 +39,15 @@ const Home: NextPage = () => {
           <div className="button-scroll z-10">
             <OutlinedButton text="Selengkapnya" Icon={ArrowIcon} />
           </div>
+        </div>
+      </section>
+
+      <section className="destinasi w-full bg-white p-8 md:px-32">
+        <h2 className="font-bold text-donorojo-darkgreen text-2xl mb-4">
+          Temukan Destinasimu
+        </h2>
+        <div className="destinasi-list">
+          <DestinasiCard />
         </div>
       </section>
     </main>

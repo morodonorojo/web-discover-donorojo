@@ -13,6 +13,10 @@ module.exports = {
         "donorojo-lightgreen": "#A0A605",
         "donorojo-cream": "#F2E0C8",
       },
+      fontFamily: {
+        playfair: "Playfair Display",
+        inter: "Inter",
+      },
     },
   },
   plugins: [

@@ -18,7 +18,11 @@ const OutlinedButton: React.FC<OutlinedButtonType> = ({
       {...props}
     >
       <p className="mr-4">{text}</p>
-      {!!Icon && <Icon />}
+      {!!Icon && (
+        <div className="h-4 w-4">
+          <Icon />
+        </div>
+      )}
     </button>
   );
 };

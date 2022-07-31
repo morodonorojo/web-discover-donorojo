@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
+  // !TODO: use better font size for desktop
   return (
     <div className="sticky top-0 z-40 flex w-full flex-col items-center justify-center bg-donorojo-darkgreen p-8 md:justify-start md:items-start md:px-32">
       <div className="relative ">
