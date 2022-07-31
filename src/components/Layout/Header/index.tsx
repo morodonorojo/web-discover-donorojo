@@ -9,7 +9,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 flex w-full flex-row items-center justify-between bg-white p-3 px-8 drop-shadow-lg">
+    <nav className="sticky top-0 z-50 flex w-full flex-row items-center justify-between bg-white p-2 px-8 drop-shadow-lg">
       <Link href="/" passHref>
         <div className="flex cursor-pointer flex-row">
           <div className="logo-discover relative h-12 w-12 items-center">
@@ -28,7 +28,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
         />
       </div>
-      <ul className="desktop-nav font-body text-donorojo-darkgreen text-lg flex child:mx-2 child:p-3 child:child:h-full child:child:w-full child:cursor-pointer child:rounded-lg child:p- child-hover:bg-donorojo-darkgreen/20">
+      <ul className="desktop-nav font-body text-donorojo-darkgreen text-lg hidden md:flex child:mx-2 child:p-3 child:child:h-full child:child:w-full child:cursor-pointer child:rounded-lg child:p- child-hover:bg-donorojo-darkgreen/20 ">
         <li>
           <Link href="#">Menu Utama</Link>
         </li>
