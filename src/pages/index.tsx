@@ -5,6 +5,11 @@ import { OutlinedButton } from "../components/Button";
 
 import ArrowIcon from "../assets/icons/icon-arrow.svg";
 import { DestinasiCard } from "../components/Card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Home: NextPage = () => {
   return (
@@ -47,7 +52,41 @@ const Home: NextPage = () => {
           Temukan Destinasimu
         </h2>
         <div className="destinasi-list">
-          <DestinasiCard />
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: false,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                centeredSlides: false,
+              },
+            }}
+            centeredSlides={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="child:child:justify-center child:child:flex child:child:w-min !pb-10"
+          >
+            <SwiperSlide>
+              <DestinasiCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <DestinasiCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <DestinasiCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <DestinasiCard />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
     </main>
