@@ -16,7 +16,7 @@ const PengembanganCard: React.FC<PengembanganCardType> = ({
       {...props}
       className={clsx(
         `${className}`,
-        "relative rounded-2xl w-60 h-[420px] bg-gray-600 overflow-hidden flex items-end cursor-pointer",
+        "relative rounded-2xl w-60 h-[420px] bg-gray-600 overflow-hidden flex items-end cursor-pointer main-drop-shadow",
         "md:w-full"
       )}
     >

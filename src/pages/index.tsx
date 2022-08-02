@@ -1,17 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import clsx from "clsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+
+import Gallery from "../components/Gallery";
 import { OutlinedButton } from "../components/Button";
 
 import ArrowIcon from "../assets/icons/icon-arrow.svg";
 import { DestinasiCard, PengembanganCard } from "../components/Card";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import clsx from "clsx";
 
 const Home: NextPage = () => {
   return (
@@ -50,7 +52,7 @@ const Home: NextPage = () => {
       </section>
 
       <section className="destinasi w-full bg-white p-8 md:px-32">
-        <h2 className="font-bold text-donorojo-darkgreen text-2xl mb-4">
+        <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
           Temukan Destinasimu
         </h2>
         <div className="destinasi-list">
@@ -93,8 +95,8 @@ const Home: NextPage = () => {
       </section>
 
       <section className="pengembangan-masyarakat w-full bg-white p-8 md:px-32">
-        <h2 className="font-bold text-donorojo-darkgreen text-2xl mb-4">
-          Pengembangan Masyarakat{" "}
+        <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
+          Pengembangan Masyarakat
         </h2>
         <div className="pengembangan-list">
           <Swiper
@@ -122,6 +124,15 @@ const Home: NextPage = () => {
               <PengembanganCard />
             </SwiperSlide>
           </Swiper>
+        </div>
+      </section>
+
+      <section className="galeri w-full bg-white p-8 md:px-32">
+        <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
+          Galeri
+        </h2>
+        <div className="gallery">
+          <Gallery />
         </div>
       </section>
     </main>
