@@ -16,6 +16,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const Home: NextPage = () => {
+  // TODO: Create PrismicIo CustomType for Destinasi, Pengembangan, and Galeri
+
   return (
     <main>
       <Head>
@@ -133,6 +135,55 @@ const Home: NextPage = () => {
         </h2>
         <div className="gallery">
           <Gallery />
+        </div>
+      </section>
+
+      <section className="testimoni w-full bg-white p-8 md:px-32">
+        <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
+          Apa Kata Mereka?
+        </h2>
+        <div className="testimoni-list w-full">
+          <div className="w-full flex flex-col sm:flex-row sm:justify-between">
+            <div className="image-part relative aspect-square w-full h-auto mb-4 rounded-xl overflow-hidden main-drop-shadow sm:w-1/2 sm:h-min sm:mr-10">
+              <Image
+                src="/images/dummy-card-bg.png"
+                alt="alt text"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+            <div className="text-part w-full text-donorojo-darkgreen bg-donorojo-cream p-8 rounded-xl main-drop-shadow sm:w-1/2 sm:aspect-square sm:h-min">
+              <h2 className="font-bold font-inter mb-2 text-lg sm:text-2xl">
+                Gua Luweng Ombo sangat menakjubkan!
+              </h2>
+              <p className="font-medium">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse quis quam nisi. Curabitur dignissim rutrum egestas.
+                Quisque varius purus vitae est tincidunt, sit amet tempor ipsum
+                commodo. Donec euismod porttitor sodales. Vivamus a sapien est.
+                Aenean sit amet nibh ut ex facilisis eleifend. Vestibulum et
+                aliquet eros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="testimoni w-full bg-white p-8 md:px-32">
+        <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
+          Peta Lokasi
+        </h2>
+        <div className="peta">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126386.04379099111!2d110.88912895386532!3d-8.14580200794246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bda0edfc0b5a3%3A0x4c62ca22c88ccf1f!2sKec.%20Donorojo%2C%20Kabupaten%20Pacitan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1659440198493!5m2!1sid!2sid"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="rounded-xl main-drop-shadow"
+          ></iframe>
         </div>
       </section>
     </main>
