@@ -23,6 +23,16 @@ module.exports = {
     function ({ addVariant }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
+      addVariant("swiper-prev-button", "& > div.swiper-button-prev");
+      addVariant(
+        "swiper-prev-button-after",
+        "& > div.swiper-button-prev::after"
+      );
+      addVariant("swiper-next-button", "& > div.swiper-button-next");
+      addVariant(
+        "swiper-next-button-after",
+        "& > div.swiper-button-next::after"
+      );
     },
   ],
 };

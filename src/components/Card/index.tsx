@@ -1,3 +1,4 @@
 import DestinasiCard from "./DestinasiCard";
+import PengembanganCard from "./PengembanganCard";
 
-export { DestinasiCard };
+export { DestinasiCard, PengembanganCard };

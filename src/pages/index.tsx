@@ -4,12 +4,14 @@ import Image from "next/image";
 import { OutlinedButton } from "../components/Button";
 
 import ArrowIcon from "../assets/icons/icon-arrow.svg";
-import { DestinasiCard } from "../components/Card";
+import { DestinasiCard, PengembanganCard } from "../components/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+import clsx from "clsx";
 
 const Home: NextPage = () => {
   return (
@@ -85,6 +87,39 @@ const Home: NextPage = () => {
             </SwiperSlide>
             <SwiperSlide>
               <DestinasiCard />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+      <section className="pengembangan-masyarakat w-full bg-white p-8 md:px-32">
+        <h2 className="font-bold text-donorojo-darkgreen text-2xl mb-4">
+          Pengembangan Masyarakat{" "}
+        </h2>
+        <div className="pengembangan-list">
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            centeredSlides={true}
+            navigation={true}
+            modules={[Navigation]}
+            className={clsx(
+              "child:child:justify-center child:child:flex child:child:w-min",
+              "swiper-prev-button:bg-donorojo-yellow swiper-prev-button:h-8 swiper-prev-button:w-8 swiper-prev-button:rounded-full swiper-prev-button:text-donorojo-darkgreen swiper-prev-button-after:text-base swiper-prev-button-after:font-bold",
+              "swiper-next-button:bg-donorojo-yellow swiper-next-button:h-8 swiper-next-button:w-8 swiper-next-button:rounded-full swiper-next-button:text-donorojo-darkgreen swiper-next-button-after:text-base swiper-next-button-after:font-bold"
+            )}
+          >
+            <SwiperSlide>
+              <PengembanganCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <PengembanganCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <PengembanganCard />
+            </SwiperSlide>
+            <SwiperSlide>
+              <PengembanganCard />
             </SwiperSlide>
           </Swiper>
         </div>
