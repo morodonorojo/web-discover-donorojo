@@ -12,7 +12,7 @@ const MobileNav: React.FC<MobileNavTypes> = ({ isMenuOpen }) => {
         isMenuOpen ? "left-0 transition-all" : "left-[-100%]"
       )}
     >
-      <ul className="mobile-nav font-body text-donorojo-darkgreen text-lg child:mb-2 child:flex child:child:h-full child:child:w-full child:cursor-pointer child:rounded-lg child:p- child-hover:bg-donorojo-darkgreen/20">
+      <ul className="mobile-nav font-body text-donorojo-darkgreen text-md child:px-6 child:py-2 child:flex child:child:h-full child:child:w-full child:cursor-pointer child:rounded-lg child:p- child-hover:bg-donorojo-darkgreen/20">
         <li>
           <Link href="#">Menu Utama</Link>
         </li>

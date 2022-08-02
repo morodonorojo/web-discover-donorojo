@@ -4,6 +4,7 @@ import Link from "next/link";
 import MobileNav from "./MobileNav";
 
 import HamburgerMenu from "../../../assets/icons/hamburger-menu.svg";
+import DestkopNav from "./DesktopNav";
 
 const Header = () => {
   // !TODO: use better font size for desktop
@@ -30,23 +31,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
         />
       </div>
-      <ul className="desktop-nav font-body text-donorojo-darkgreen text-lg hidden md:flex child:mx-2 child:p-3 child:child:h-full child:child:w-full child:cursor-pointer child:rounded-lg child:p- child-hover:bg-donorojo-darkgreen/20 ">
-        <li>
-          <Link href="#">Menu Utama</Link>
-        </li>
-        <li>
-          <Link href="#">Destinasi</Link>
-        </li>
-        <li>
-          <Link href="#">Galeri</Link>
-        </li>
-        <li>
-          <Link href="#">Testimoni</Link>
-        </li>
-        <li>
-          <Link href="#">Artikel</Link>
-        </li>
-      </ul>
+      <DestkopNav />
       <MobileNav isMenuOpen={isMenuOpen} />
     </nav>
   );
