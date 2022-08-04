@@ -1,0 +1,41 @@
+{
+  "id": "artikel_proker",
+  "label": "Artikel Proker",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "featuredImage": {
+        "type": "Image",
+        "config": {
+          "label": "Featured Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "pic": {
+        "type": "Text",
+        "config": {
+          "label": "PIC",
+          "placeholder": ""
+        }
+      },
+      "bodyText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Body Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

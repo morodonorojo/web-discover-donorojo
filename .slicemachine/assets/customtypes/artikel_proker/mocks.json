@@ -1,0 +1,25 @@
+{
+  "id": "20d54b07-9cc4-4d9b-9066-b41b65bfd484",
+  "uid": "vero-similique-quaerat",
+  "type": "artikel_proker",
+  "data": {
+    "featuredImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+    },
+    "title": "orchestrate holistic e-business",
+    "pic": "aggregate cross-platform mindshare",
+    "bodyText": [
+      {
+        "type": "paragraph",
+        "text": "Exercitation pariatur qui consectetur aliqua Lorem. Nisi eu in commodo. Voluptate cupidatat sunt cupidatat proident id voluptate.",
+        "spans": []
+      }
+    ]
+  }
+}

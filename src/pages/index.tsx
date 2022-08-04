@@ -4,20 +4,25 @@ import Image from "next/image";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+import { GetStaticProps } from "next";
 
 import Gallery from "../components/Gallery";
 import { OutlinedButton } from "../components/Button";
 
 import ArrowIcon from "../assets/icons/icon-arrow.svg";
 import { DestinasiCard, PengembanganCard } from "../components/Card";
+import { createClient } from "../../prismicio";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { DestinasiType } from "../@types/common";
 
-const Home: NextPage = () => {
-  // TODO: Create PrismicIo CustomType for Destinasi, Pengembangan, and Galeri
+type HomeType = {
+  destinationList?: DestinasiType[];
+};
 
+const Home: NextPage<HomeType> = ({ destinationList }) => {
   return (
     <main>
       <Head>
@@ -80,18 +85,19 @@ const Home: NextPage = () => {
             modules={[Pagination]}
             className="child:child:justify-center child:child:flex child:child:w-min !pb-10"
           >
-            <SwiperSlide>
-              <DestinasiCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <DestinasiCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <DestinasiCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <DestinasiCard />
-            </SwiperSlide>
+            {destinationList?.map((destinasi) => {
+              return (
+                <SwiperSlide key={destinasi.uid}>
+                  <DestinasiCard
+                    destinationName={destinasi.data.namaDestinasi}
+                    imageSrc={destinasi.data.heroImage.url}
+                    imageAlt={destinasi.data.heroImage.alt}
+                    desa={destinasi.data.namaDesa}
+                    pageUrl={destinasi.uid}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </section>
@@ -191,3 +197,24 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  // Client used to fetch CMS content.
+  const client = createClient();
+
+  // Page document for our homepage from the CMS.
+  const destinationList = await client.getAllByType("destinasi", {
+    graphQuery: `{
+      destinasi {
+        uid
+        namaDestinasi
+        namaDesa
+        heroImage
+      }
+    }`,
+  });
+
+  return {
+    props: { destinationList },
+  };
+};

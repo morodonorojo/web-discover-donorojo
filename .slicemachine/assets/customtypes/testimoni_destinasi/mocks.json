@@ -1,0 +1,19 @@
+{
+  "id": "84bf359a-ccaf-4532-b196-0c682d90dc0b",
+  "uid": "a-sequi-aut",
+  "type": "testimoni_destinasi",
+  "data": {
+    "featuredImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+    },
+    "name": "productize strategic relationships",
+    "highlightText": "drive killer interfaces",
+    "bodyText": "enhance proactive convergence"
+  }
+}

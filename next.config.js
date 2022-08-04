@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ["images.prismic.io"],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

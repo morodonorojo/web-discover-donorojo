@@ -1,0 +1,39 @@
+{
+  "id": "testimoni_destinasi",
+  "label": "TestimoniDestinasi",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "featuredImage": {
+        "type": "Image",
+        "config": {
+          "label": "Featured Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "highlightText": {
+        "type": "Text",
+        "config": {
+          "label": "Highlight Text",
+          "placeholder": ""
+        }
+      },
+      "bodyText": {
+        "type": "Text",
+        "config": {
+          "label": "Body Text",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

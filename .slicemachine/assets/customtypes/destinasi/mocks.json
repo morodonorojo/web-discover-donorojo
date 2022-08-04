@@ -1,0 +1,27 @@
+{
+  "id": "1782a5e7-6994-4dbf-afca-5f3d5c4458da",
+  "uid": "cum-sit-aut",
+  "type": "destinasi",
+  "data": {
+    "heroImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
+    },
+    "namaDestinasi": "grow magnetic synergies",
+    "namaDesa": "drive distributed e-markets",
+    "namaDusun": "engineer front-end markets",
+    "article": [
+      {
+        "type": "paragraph",
+        "text": "Pariatur eu ipsum qui sunt elit sint pariatur aliquip irure officia dolore. Id amet laboris excepteur mollit consectetur voluptate qui et nostrud ipsum id. Sunt ullamco dolore culpa excepteur veniam sit nisi adipisicing est enim esse tempor aliqua nulla ullamco.",
+        "spans": []
+      }
+    ],
+    "embedMapsSrc": "scale global applications"
+  }
+}
