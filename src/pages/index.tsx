@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { DestinasiType, TestimoniType } from "../@types/common";
 import TestimoniCard from "../components/Card/TestimoniCard";
+import Link from "next/link";
 
 type HomeType = {
   destinationList?: DestinasiType[];
@@ -35,7 +36,7 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="hero h-screen w-full">
+      <section id="hero" className="hero h-screen w-full">
         <div className="absolute w-full h-screen">
           <Image
             src="/images/bg-hero.webp"
@@ -55,12 +56,17 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
             </p>
           </div>
           <div className="button-scroll z-10">
-            <OutlinedButton text="Selengkapnya" Icon={ArrowIcon} />
+            <Link href="#destinasi">
+              <OutlinedButton text="Selengkapnya" Icon={ArrowIcon} />
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="destinasi w-full bg-white p-8 md:px-32">
+      <section
+        id="destinasi"
+        className="destinasi w-full bg-white p-8 md:px-32"
+      >
         <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
           Temukan Destinasimu
         </h2>
@@ -104,7 +110,10 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
         </div>
       </section>
 
-      <section className="pengembangan-masyarakat w-full bg-white p-8 md:px-32">
+      <section
+        id="pengembangan-masyarakat"
+        className="pengembangan-masyarakat w-full bg-white p-8 md:px-32"
+      >
         <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
           Pengembangan Masyarakat
         </h2>
@@ -137,7 +146,7 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
         </div>
       </section>
 
-      <section className="galeri w-full bg-white p-8 md:px-32">
+      <section id="galeri" className="galeri w-full bg-white p-8 md:px-32">
         <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
           Galeri
         </h2>
@@ -146,7 +155,10 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
         </div>
       </section>
 
-      <section className="testimoni w-full bg-white p-8 md:px-32">
+      <section
+        id="testimoni"
+        className="testimoni w-full bg-white p-8 md:px-32"
+      >
         <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
           Apa Kata Mereka?
         </h2>
@@ -179,7 +191,7 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
         </Swiper>
       </section>
 
-      <section className="testimoni w-full bg-white p-8 md:px-32">
+      <section id="peta" className="testimoni w-full bg-white p-8 md:px-32">
         <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
           Peta Lokasi
         </h2>

@@ -14,19 +14,19 @@ const MobileNav: React.FC<MobileNavTypes> = ({ isMenuOpen }) => {
     >
       <ul className="mobile-nav font-body text-donorojo-darkgreen text-md child:px-6 child:py-2 child:flex child:child:h-full child:child:w-full child:cursor-pointer child:rounded-lg child:p- child-hover:bg-donorojo-darkgreen/20">
         <li>
-          <Link href="#">Menu Utama</Link>
+          <Link href="/">Menu Utama</Link>
         </li>
         <li>
-          <Link href="#">Destinasi</Link>
+          <Link href="/#destinasi">Destinasi</Link>
         </li>
         <li>
-          <Link href="#">Galeri</Link>
+          <Link href="/#pengembangan-masyarakat">Artikel</Link>
         </li>
         <li>
-          <Link href="#">Testimoni</Link>
+          <Link href="/#galeri">Galeri</Link>
         </li>
         <li>
-          <Link href="#">Artikel</Link>
+          <Link href="/#testimoni">Testimoni</Link>
         </li>
       </ul>
     </div>

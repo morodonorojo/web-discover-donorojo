@@ -5,19 +5,19 @@ const DestkopNav = () => {
   return (
     <ul className="desktop-nav font-body text-donorojo-darkgreen text-md hidden child:transition-all child:duration-300 md:flex child:mx-2 child:p-3 child:child:h-full child:child:w-full child:cursor-pointer child:rounded-xl child-hover:bg-donorojo-darkgreen/20 ">
       <li>
-        <Link href="#">Menu Utama</Link>
+        <Link href="/">Menu Utama</Link>
       </li>
       <li>
-        <Link href="#">Destinasi</Link>
+        <Link href="/#destinasi">Destinasi</Link>
       </li>
       <li>
-        <Link href="#">Galeri</Link>
+        <Link href="/#pengembangan-masyarakat">Artikel</Link>
       </li>
       <li>
-        <Link href="#">Testimoni</Link>
+        <Link href="/#galeri">Galeri</Link>
       </li>
       <li>
-        <Link href="#">Artikel</Link>
+        <Link href="/#testimoni">Testimoni</Link>
       </li>
     </ul>
   );
