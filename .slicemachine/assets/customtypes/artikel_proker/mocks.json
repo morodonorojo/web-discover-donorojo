@@ -1,6 +1,6 @@
 {
-  "id": "20d54b07-9cc4-4d9b-9066-b41b65bfd484",
-  "uid": "vero-similique-quaerat",
+  "id": "6a2b3ee8-52d7-492f-b888-35120a330cbf",
+  "uid": "eligendi-nisi-soluta",
   "type": "artikel_proker",
   "data": {
     "featuredImage": {
@@ -10,16 +10,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
     },
-    "title": "orchestrate holistic e-business",
-    "pic": "aggregate cross-platform mindshare",
+    "title": "enhance frictionless architectures",
+    "pic": "target efficient vortals",
     "bodyText": [
       {
         "type": "paragraph",
-        "text": "Exercitation pariatur qui consectetur aliqua Lorem. Nisi eu in commodo. Voluptate cupidatat sunt cupidatat proident id voluptate.",
+        "text": "Dolor laborum duis reprehenderit reprehenderit irure sit in nostrud exercitation incididunt cillum. Ex cillum velit occaecat fugiat dolor consequat fugiat enim labore irure culpa labore deserunt pariatur aute. Nostrud duis elit consectetur adipisicing cupidatat culpa est voluptate culpa.",
         "spans": []
       }
-    ]
+    ],
+    "date": "2022-05-05"
   }
 }
