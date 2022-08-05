@@ -8,6 +8,9 @@ export type DestinasiType = {
       url: string;
       alt: string;
     };
+    article: {
+      text: string;
+    }[];
     embedMapsSrc: string;
   };
 };

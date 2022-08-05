@@ -193,7 +193,7 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="rounded-xl main-drop-shadow"
-          ></iframe>
+          />
         </div>
       </section>
     </main>
