@@ -1,11 +1,11 @@
 import { StaticImageData } from "next/image";
 
 export type DestinasiCardType = {
-  destinationName?: string;
-  desa?: string;
+  destinationName: string;
+  desa: string;
   imageSrc: string | StaticImageData;
-  imageAlt?: string;
-  pageUrl?: string;
+  imageAlt: string;
+  pageUrl: string;
 } & JSX.IntrinsicElements["div"];
 
 export type PengembanganCardType = {
@@ -13,3 +13,12 @@ export type PengembanganCardType = {
   imageSrc?: string;
   pageUrl?: string;
 } & JSX.IntrinsicElements["div"];
+
+export type TestimoniCardType = {
+  testimoneeName: string;
+  desinationName: string;
+  imageUrl: string | StaticImageData;
+  imageAlt: string;
+  highlightText: string;
+  bodyText: string;
+};

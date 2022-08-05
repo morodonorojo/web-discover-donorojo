@@ -16,13 +16,15 @@ import { createClient } from "../../prismicio";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { DestinasiType } from "../@types/common";
+import { DestinasiType, TestimoniType } from "../@types/common";
+import TestimoniCard from "../components/Card/TestimoniCard";
 
 type HomeType = {
   destinationList?: DestinasiType[];
+  testimoniList?: TestimoniType[];
 };
 
-const Home: NextPage<HomeType> = ({ destinationList }) => {
+const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
   return (
     <main>
       <Head>
@@ -148,31 +150,33 @@ const Home: NextPage<HomeType> = ({ destinationList }) => {
         <h2 className="font-bold text-donorojo-darkgreen text-3xl mb-4">
           Apa Kata Mereka?
         </h2>
-        <div className="testimoni-list w-full">
-          <div className="w-full flex flex-col sm:flex-row sm:justify-between">
-            <div className="image-part relative aspect-square w-full h-auto mb-4 rounded-xl overflow-hidden main-drop-shadow sm:w-1/2 sm:h-min sm:mr-10">
-              <Image
-                src="/images/dummy-card-bg.png"
-                alt="alt text"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="text-part w-full text-donorojo-darkgreen bg-donorojo-cream p-8 rounded-xl main-drop-shadow sm:w-1/2 sm:aspect-square sm:h-min">
-              <h2 className="font-bold font-inter mb-2 text-lg sm:text-2xl">
-                Gua Luweng Ombo sangat menakjubkan!
-              </h2>
-              <p className="font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse quis quam nisi. Curabitur dignissim rutrum egestas.
-                Quisque varius purus vitae est tincidunt, sit amet tempor ipsum
-                commodo. Donec euismod porttitor sodales. Vivamus a sapien est.
-                Aenean sit amet nibh ut ex facilisis eleifend. Vestibulum et
-                aliquet eros.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={1}
+          centeredSlides={true}
+          navigation={true}
+          modules={[Navigation]}
+          className={clsx(
+            "child:child:justify-center child:child:flex child:child:w-min",
+            "swiper-prev-button:bg-donorojo-yellow swiper-prev-button:h-8 swiper-prev-button:w-8 swiper-prev-button:rounded-full swiper-prev-button:text-donorojo-darkgreen swiper-prev-button-after:text-base swiper-prev-button-after:font-bold",
+            "swiper-next-button:bg-donorojo-yellow swiper-next-button:h-8 swiper-next-button:w-8 swiper-next-button:rounded-full swiper-next-button:text-donorojo-darkgreen swiper-next-button-after:text-base swiper-next-button-after:font-bold"
+          )}
+        >
+          {testimoniList?.map((testimoni) => {
+            return (
+              <SwiperSlide key={testimoni.uid}>
+                <TestimoniCard
+                  desinationName={testimoni.data.destinationName}
+                  testimoneeName={testimoni.data.name}
+                  highlightText={testimoni.data.highlightText}
+                  bodyText={testimoni.data.bodyText}
+                  imageUrl={testimoni.data.featuredImage.url}
+                  imageAlt={testimoni.data.featuredImage.alt}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </section>
 
       <section className="testimoni w-full bg-white p-8 md:px-32">
@@ -214,7 +218,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }`,
   });
 
+  const testimoniList = await client.getAllByType("testimoni_destinasi");
+
   return {
-    props: { destinationList },
+    props: { destinationList, testimoniList },
   };
 };

@@ -11,3 +11,17 @@ export type DestinasiType = {
     embedMapsSrc: string;
   };
 };
+
+export type TestimoniType = {
+  uid: string;
+  data: {
+    destinationName: string;
+    name: string;
+    highlightText: string;
+    bodyText: string;
+    featuredImage: {
+      url: string;
+      alt: string;
+    };
+  };
+};

@@ -13,6 +13,13 @@
           "thumbnails": []
         }
       },
+      "destinationName": {
+        "type": "Text",
+        "config": {
+          "label": "Destination Name",
+          "placeholder": ""
+        }
+      },
       "name": {
         "type": "Text",
         "config": {

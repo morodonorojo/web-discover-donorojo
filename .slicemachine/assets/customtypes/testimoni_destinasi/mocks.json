@@ -1,6 +1,6 @@
 {
-  "id": "84bf359a-ccaf-4532-b196-0c682d90dc0b",
-  "uid": "a-sequi-aut",
+  "id": "2476b695-78cb-4048-881e-29b924091b41",
+  "uid": "aut-dolor-nobis",
   "type": "testimoni_destinasi",
   "data": {
     "featuredImage": {
@@ -10,10 +10,11 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
     },
-    "name": "productize strategic relationships",
-    "highlightText": "drive killer interfaces",
-    "bodyText": "enhance proactive convergence"
+    "destinationName": "architect innovative blockchains",
+    "name": "extend rich mindshare",
+    "highlightText": "facilitate out-of-the-box convergence",
+    "bodyText": "strategize plug-and-play e-tailers"
   }
 }
