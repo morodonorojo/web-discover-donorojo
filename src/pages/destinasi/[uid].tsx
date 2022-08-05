@@ -7,7 +7,6 @@ import { ParsedUrlQuery } from "querystring";
 import Link from "next/link";
 
 const DestinasiPage: NextPage<DestinasiType> = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <section className="hero relative w-full h-screen overflow-hidden">
