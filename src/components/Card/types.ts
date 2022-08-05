@@ -3,15 +3,16 @@ import { StaticImageData } from "next/image";
 export type DestinasiCardType = {
   destinationName: string;
   desa: string;
-  imageSrc: string | StaticImageData;
+  imageUrl: string | StaticImageData;
   imageAlt: string;
   pageUrl: string;
 } & JSX.IntrinsicElements["div"];
 
 export type PengembanganCardType = {
-  pengembanganTitle?: string;
-  imageSrc?: string;
-  pageUrl?: string;
+  pengembanganTitle: string;
+  imageUrl: string;
+  imageAlt: string;
+  pageUrl: string;
 } & JSX.IntrinsicElements["div"];
 
 export type TestimoniCardType = {

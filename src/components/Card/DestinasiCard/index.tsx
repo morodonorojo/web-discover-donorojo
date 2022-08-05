@@ -11,7 +11,7 @@ import Link from "next/link";
 const DestinasiCard: React.FC<DestinasiCardType> = ({
   destinationName,
   desa,
-  imageSrc,
+  imageUrl,
   imageAlt,
   pageUrl,
   className,
@@ -39,7 +39,7 @@ const DestinasiCard: React.FC<DestinasiCardType> = ({
         </div>
         <div className="absolute h-full w-full top-0 left-0">
           <Image
-            src={imageSrc}
+            src={imageUrl}
             alt={imageAlt}
             layout="fill"
             objectFit="cover"

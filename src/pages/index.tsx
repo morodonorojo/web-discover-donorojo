@@ -16,16 +16,21 @@ import { createClient } from "../../prismicio";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { DestinasiType, TestimoniType } from "../@types/common";
+import { ArtikelType, DestinasiType, TestimoniType } from "../@types/common";
 import TestimoniCard from "../components/Card/TestimoniCard";
 import Link from "next/link";
 
 type HomeType = {
   destinationList?: DestinasiType[];
   testimoniList?: TestimoniType[];
+  artikelList?: ArtikelType[];
 };
 
-const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
+const Home: NextPage<HomeType> = ({
+  destinationList,
+  testimoniList,
+  artikelList,
+}) => {
   return (
     <main>
       <Head>
@@ -98,7 +103,7 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
                 <SwiperSlide key={destinasi.uid}>
                   <DestinasiCard
                     destinationName={destinasi.data.namaDestinasi}
-                    imageSrc={destinasi.data.heroImage.url}
+                    imageUrl={destinasi.data.heroImage.url}
                     imageAlt={destinasi.data.heroImage.alt}
                     desa={destinasi.data.namaDesa}
                     pageUrl={destinasi.uid}
@@ -130,18 +135,18 @@ const Home: NextPage<HomeType> = ({ destinationList, testimoniList }) => {
               "swiper-next-button:bg-donorojo-yellow swiper-next-button:h-8 swiper-next-button:w-8 swiper-next-button:rounded-full swiper-next-button:text-donorojo-darkgreen swiper-next-button-after:text-base swiper-next-button-after:font-bold"
             )}
           >
-            <SwiperSlide>
-              <PengembanganCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PengembanganCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PengembanganCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PengembanganCard />
-            </SwiperSlide>
+            {artikelList?.map((artikel) => {
+              return (
+                <SwiperSlide key={artikel.uid}>
+                  <PengembanganCard
+                    pageUrl={artikel.uid}
+                    imageAlt={artikel.data.featuredImage.alt}
+                    imageUrl={artikel.data.featuredImage.url}
+                    pengembanganTitle={artikel.data.title}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </section>
@@ -232,7 +237,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const testimoniList = await client.getAllByType("testimoni_destinasi");
 
+  const artikelList = await client.getAllByType("artikel_proker", {
+    graphQuery: `{
+      artikel_proker {
+        uid
+        title
+        featuredImage
+      }
+    }`,
+  });
+
   return {
-    props: { destinationList, testimoniList },
+    props: { destinationList, testimoniList, artikelList },
   };
 };

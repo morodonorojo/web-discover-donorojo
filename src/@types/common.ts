@@ -15,6 +15,22 @@ export type DestinasiType = {
   };
 };
 
+export type ArtikelType = {
+  uid: string;
+  data: {
+    title: string;
+    pic: string;
+    featuredImage: {
+      url: string;
+      alt: string;
+    };
+    bodyText: {
+      text: string;
+    }[];
+    date: string;
+  };
+};
+
 export type TestimoniType = {
   uid: string;
   data: {
