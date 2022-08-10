@@ -19,6 +19,20 @@ const DestkopNav = () => {
       <li>
         <Link href="/#testimoni">Testimoni</Link>
       </li>
+      <a
+        href="https://tic-ngiroboyo.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TIC
+      </a>
+      <a
+        href="https://tanaman-konservasi-ngiroboyo.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Konservasi
+      </a>
     </ul>
   );
 };
